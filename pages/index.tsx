@@ -32,9 +32,18 @@ const Home: NextPage = () => {
               <span>1.23K</span>
             </div>
           </section>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, at quibusdam. Dicta, quam libero. Nam aperiam architecto magni porro dolorem quasi consequuntur omnis, sapiente quisquam eius fugiat repellendus illum quae?</p>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa neque voluptate modi fugit, impedit quaerat error maxime delectus? Quo doloribus dolores quas reprehenderit sunt non fugit voluptatum ipsum perferendis vitae!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium minus maxime laboriosam culpa deleniti error non quam consequatur odio maiores quidem autem necessitatibus expedita ut id quas, inventore velit et.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam recusandae voluptate, commodi illum non veniam quaerat aperiam nesciunt magni, praesentium dolor sapiente cupiditate ex at, explicabo iusto. Eveniet, voluptatem voluptatum.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe cumque molestiae soluta optio voluptas, error, illum odit blanditiis eius id ab sequi delectus dolorem. Placeat ipsam assumenda architecto possimus nihil.</li>
+          </ul>
         </main>
         <aside>
-
+          <img src='/example.jpg' />
         </aside>
       </div>
     </>

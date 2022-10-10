@@ -10,19 +10,26 @@ $textColour: #aaaaac;
   .main {
     width: 70%;
     margin-right: -10%;
+    color: $textColour;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(97deg, #10131a 85%, $textColour 85%, $textColour 85.2%, transparent 85.2%);
     z-index: 1;
 
     h1 {
-      font-size: 3.5em;
+      font-size: 4.5em;
       width: fit-content;
       padding-left: 3vw;
       padding-right: 3vw;
       color: $textColour;
       border-bottom: solid 1vmin $textColour;
       border-right: solid 1vmin transparent;
+    }
+
+    p, ul {
+      font-size: 1.2em;
+      width: 70%;
+      margin-left: 3vw;
     }
 
     #groupInformation {
@@ -73,6 +80,10 @@ $textColour: #aaaaac;
 
   aside {
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
+    overflow: hidden;
   }
 }
