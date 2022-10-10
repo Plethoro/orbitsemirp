@@ -1,0 +1,20 @@
+#navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #020410;
+  border-bottom: 1px solid #aaaaac;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+  }
+
+  &.sticked {
+    height: 10vh;
+  }
+}
