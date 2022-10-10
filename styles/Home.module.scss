@@ -1,0 +1,33 @@
+$textColour: #aaaaac;
+
+#homePage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+  
+  .main {
+    width: 70%;
+    margin-right: -10%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(97deg, #10131a 85%, $textColour 85%, $textColour 85.2%, transparent 85.2%);
+
+    h1 {
+      font-size: 3.5em;
+      width: fit-content;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      color: $textColour;
+      border-bottom: solid 1vmin $textColour;
+      border-right: solid 1vmin transparent;
+    }
+    z-index: 1;
+  }
+
+  aside {
+    width: 60%;
+    background-color: black;
+  }
+}

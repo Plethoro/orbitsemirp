@@ -4,17 +4,14 @@
   display: flex;
   position: sticky;
   top: 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #020410;
   border-bottom: 1px solid #aaaaac;
   overflow: hidden;
+  z-index: 2;
 
   img {
     height: 100%;
-  }
-
-  &.sticked {
-    height: 10vh;
   }
 }
