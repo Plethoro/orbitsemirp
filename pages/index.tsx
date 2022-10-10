@@ -22,19 +22,29 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
           <h1>Lorem Ipsum!</h1>
 
           <section id={styles.groupInformation}>
-            <div className={styles.group}>
+            <a
+              href='https://steamcommunity.com/groups/Orbit-SemiRP'
+              target="_blank"
+              rel="noreffer"
+              className={styles.group}
+            >
               <div className={styles.iconContainer}>
                 <FontAwesomeIcon icon={faSteam} />
               </div>
               <span>{steamMembers}</span>
-            </div>
+            </a>
 
-            <div className={styles.group}>
+            <a
+              href='https://discord.gg/jqGxERcFEe'
+              target="_blank"
+              rel="noreffer"
+              className={styles.group}
+            >
               <div className={styles.iconContainer}>
                 <FontAwesomeIcon icon={faDiscord} />
               </div>
               <span>{discordMembers}</span>
-            </div>
+            </a>
           </section>
 
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, at quibusdam. Dicta, quam libero. Nam aperiam architecto magni porro dolorem quasi consequuntur omnis, sapiente quisquam eius fugiat repellendus illum quae?</p>
