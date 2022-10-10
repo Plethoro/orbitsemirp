@@ -34,6 +34,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
           <h3>Join our Community:</h3>
 
           <section id={styles.groupInformation}>
+            {/* Steam */}
             <a
               href='https://steamcommunity.com/groups/Orbit-SemiRP'
               target="_blank"
@@ -46,6 +47,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
               <span>{steamMembers}</span>
             </a>
 
+            {/* Discord */}
             <a
               href='https://discord.gg/jqGxERcFEe'
               target="_blank"
@@ -57,9 +59,22 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
               </div>
               <span>{discordMembers}</span>
             </a>
+
+            {/* Unturned Servers */}
+            <a
+              href='https://unturned-servers.net/server/299182/'
+              target="_blank"
+              rel="noreffer"
+              className={styles.group}
+            >
+              <div className={styles.iconContainer}>
+                <img src="unturned.png" />
+              </div>
+              <span>13/24</span>
+            </a>
           </section>
 
-          <p>Orbit Semi-RP is a new upcoming server , with a custom map and soon custom mods . We plan on making a server where the players have a choice on whats going to be on our server and making the server easy to play and most importantly fun to play!</p>
+          <p><b>Orbit Semi-RP</b> is a new upcoming server , with a custom map and soon custom mods . We plan on making a server where the players have a choice on whats going to be on our server and making the server easy to play and most importantly fun to play!</p>
 
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa neque voluptate modi fugit, impedit quaerat error maxime delectus? Quo doloribus dolores quas reprehenderit sunt non fugit voluptatum ipsum perferendis vitae!</li>
