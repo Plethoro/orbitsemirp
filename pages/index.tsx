@@ -1,10 +1,20 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSteam, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { HomepageProps } from '../types'
 
-const Home: NextPage = () => {
+export const getServerSideProps: GetServerSideProps = async (): Promise<{ props: HomepageProps }> => {
+  return {
+    props: {
+      steamMembers: "876",
+      discordMembers: "1.23k"
+    }
+  }
+}
+
+const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
   return (
     <>
       <Head>
@@ -22,14 +32,14 @@ const Home: NextPage = () => {
               <div className={styles.iconContainer}>
                 <FontAwesomeIcon icon={faSteam} />
               </div>
-              <span>876</span>
+              <span>{steamMembers}</span>
             </div>
 
             <div className={styles.group}>
               <div className={styles.iconContainer}>
                 <FontAwesomeIcon icon={faDiscord} />
               </div>
-              <span>1.23K</span>
+              <span>{discordMembers}</span>
             </div>
           </section>
 
