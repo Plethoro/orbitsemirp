@@ -4,15 +4,9 @@ import styles from '../styles/Home.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSteam, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { HomepageProps } from '../types'
+import homePageProps from '../ssr'
 
-export const getServerSideProps: GetServerSideProps = async (): Promise<{ props: HomepageProps }> => {
-  return {
-    props: {
-      steamMembers: "876",
-      discordMembers: "1.23k"
-    }
-  }
-}
+export const getServerSideProps: GetServerSideProps = homePageProps;
 
 const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
   return (
