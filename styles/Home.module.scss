@@ -18,19 +18,53 @@ $textColour: #aaaaac;
     filter: drop-shadow(2px 0px 5px black);
     font-family: "Saira Condensed";
 
-    h1 {
-      font-size: 4.5em;
+    #header {
       width: fit-content;
-      padding-left: 3vw;
+      display: flex;
+      align-items: flex-end;
       padding-right: 3vw;
-      margin: 0;
-      color: $textColour;
       border-bottom: solid 1vmin $textColour;
       border-right: solid 1vmin transparent;
-      font-family: "Play";
+
+      .icon {
+        filter: drop-shadow(0px 0px 3px $textColour);
+
+        .mask1 {
+          transform: scale(1.5);
+          width: fit-content;
+          height: fit-content;
+          margin-bottom: -5vh;
+          mask: linear-gradient(45deg, transparent 35.5%, black 35.5%, black 66.5%, transparent 66.5%);
+
+          .mask2 {
+            width: fit-content;
+            height: fit-content;
+            mask: linear-gradient(-45deg, transparent 36.2%, black 36.2%, black 65.8%, transparent 65.8%);
+
+            img {
+              height: 20vh;
+            }
+          }
+        }
+      }
+
+      h1 {
+        font-size: 3.5em;
+        width: fit-content;
+        margin: 0;
+        color: $textColour;
+        font-family: "Play";
+        color: #eeeeed;
+      }
     }
 
-    p, ul {
+    h3 {
+      margin: 0;
+      margin-left: 20vh;
+    }
+
+    p,
+    ul {
       font-size: 1.2em;
       width: 70%;
       margin-left: 3vw;
@@ -41,6 +75,7 @@ $textColour: #aaaaac;
       height: 2vmax;
       display: flex;
       margin: 1.5%;
+      margin-top: 0;
 
       .group {
         width: 20%;
@@ -49,8 +84,8 @@ $textColour: #aaaaac;
         justify-content: space-between;
         align-items: center;
         margin: 1.5%;
-        border-top: 1px solid $textColour;
-        border: 1px solid $textColour;
+        border-top: 1px solid #eeeeed;
+        border: 1px solid #eeeeed;
         border-radius: 100px;
         overflow: hidden;
         filter: drop-shadow(0px 0px 5px black);
@@ -66,7 +101,7 @@ $textColour: #aaaaac;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #aaaaac;
+          background-color: #eeeeed;
 
           svg {
             height: 90%;

@@ -19,7 +19,19 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
 
       <div id={styles.homePage}>
         <main className={styles.main}>
-          <h1>Lorem Ipsum!</h1>
+          <div id={styles.header}>
+            <div className={styles.icon}>
+              <div className={styles.mask1}>
+                <div className={styles.mask2}>
+                  <img src="/orbit.png" />
+                </div>
+              </div>
+            </div>
+
+            <h1><i>Unturned Modded PVP</i></h1>
+          </div>
+
+          <h3>Join our Community:</h3>
 
           <section id={styles.groupInformation}>
             <a
@@ -47,7 +59,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
             </a>
           </section>
 
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, at quibusdam. Dicta, quam libero. Nam aperiam architecto magni porro dolorem quasi consequuntur omnis, sapiente quisquam eius fugiat repellendus illum quae?</p>
+          <p>Orbit Semi-RP is a new upcoming server , with a custom map and soon custom mods . We plan on making a server where the players have a choice on whats going to be on our server and making the server easy to play and most importantly fun to play!</p>
 
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa neque voluptate modi fugit, impedit quaerat error maxime delectus? Quo doloribus dolores quas reprehenderit sunt non fugit voluptatum ipsum perferendis vitae!</li>
