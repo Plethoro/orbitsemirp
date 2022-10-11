@@ -1,3 +1,5 @@
+$textColour: #aaaaac;
+
 #slideShow {
   width: 60%;
   min-height: 90vh;
@@ -30,38 +32,113 @@
   }
 
   @media only screen and (max-width: 425px) {
-    display: none;
+    width: 90vw;
+    margin-left: 5vw;
+    border-left: 1px solid $textColour;
+    border-right: 1px solid $textColour;
+    min-height: auto;
+    flex-direction: column;
+
+    img {
+      position: relative;
+      border-bottom: 5vh solid #10131a;
+      width: 90vw;
+      height: auto;
+      transform: scale(1);
+
+      animation: none !important;
+    }
   }
 }
 
 @keyframes move1 {
-  0% {margin-left: 0%; opacity: 1;}
-  20% {margin-left: -20%; opacity: 1;}
-  25% {margin-left: -25%;  opacity: 0;}
-  75% {margin-left: 25%;  opacity: 0;}
-  95% {margin-left: 5%;  opacity: 0;}
-  100% {margin-left: 0%;  opacity: 1;}
+  0% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+  20% {
+    margin-left: -20%;
+    opacity: 1;
+  }
+  25% {
+    margin-left: -25%;
+    opacity: 0;
+  }
+  75% {
+    margin-left: 25%;
+    opacity: 0;
+  }
+  95% {
+    margin-left: 5%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 
 @keyframes move2 {
-  0% {margin-left: -50%; opacity: 1;}
-  25% {margin-left: -25%; opacity: 1;}
-  45% {margin-left: -5%; opacity: 1;}
-  50% {margin-left: 0%;  opacity: 0;}
-  100% {margin-left: 0%;  opacity: 0;}
+  0% {
+    margin-left: -50%;
+    opacity: 1;
+  }
+  25% {
+    margin-left: -25%;
+    opacity: 1;
+  }
+  45% {
+    margin-left: -5%;
+    opacity: 1;
+  }
+  50% {
+    margin-left: 0%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 0;
+  }
 }
 
 @keyframes move3 {
-  0% {margin-left: 45%; opacity: 1;}
-  50% {margin-left: -5%; opacity: 1;}
-  70% {margin-left: -25%; opacity: 1;}
-  75% {margin-left: -30%;  opacity: 0;}
-  100% {margin-left: -0%;  opacity: 0;}
+  0% {
+    margin-left: 45%;
+    opacity: 1;
+  }
+  50% {
+    margin-left: -5%;
+    opacity: 1;
+  }
+  70% {
+    margin-left: -25%;
+    opacity: 1;
+  }
+  75% {
+    margin-left: -30%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: -0%;
+    opacity: 0;
+  }
 }
 
 @keyframes move4 {
-  0% {margin-left: -75%; opacity: 1;}
-  75% {margin-left: -25%; opacity: 1;}
-  95% {margin-left: -5%; opacity: 1;}
-  100% {margin-left: 0%;  opacity: 0;}
+  0% {
+    margin-left: -75%;
+    opacity: 1;
+  }
+  75% {
+    margin-left: -25%;
+    opacity: 1;
+  }
+  95% {
+    margin-left: -5%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 0;
+  }
 }

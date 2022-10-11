@@ -137,6 +137,8 @@ $textColour: #aaaaac;
   }
 
   @media only screen and (max-width: 425px) {
+    flex-direction: column;
+
     .main {
       width: 90%;
       margin-left: auto;
@@ -146,6 +148,7 @@ $textColour: #aaaaac;
       border-left: 1px solid $textColour;
       border-right: 1px solid $textColour;
       font-size: 1.4vmax;
+      filter: none;
 
       #header {
         width: 100%;
