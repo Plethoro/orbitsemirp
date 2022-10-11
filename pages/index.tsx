@@ -64,7 +64,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedP
             <a
               href='https://steamcommunity.com/groups/Orbit-SemiRP'
               target="_blank"
-              rel="noreffer"
+              rel="noreferrer"
               className={styles.group}
             >
               <div className={styles.iconContainer}>
@@ -77,7 +77,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedP
             <a
               href='https://discord.gg/jqGxERcFEe'
               target="_blank"
-              rel="noreffer"
+              rel="noreferrer"
               className={styles.group}
             >
               <div className={styles.iconContainer}>
@@ -90,7 +90,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedP
             <a
               href='https://unturned-servers.net/server/299182/'
               target="_blank"
-              rel="noreffer"
+              rel="noreferrer"
               className={styles.group}
             >
               <div className={styles.iconContainer}>
@@ -103,10 +103,10 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedP
           <p><b>Orbit Semi-RP</b> is a new upcoming server , with a custom map and soon custom mods . We plan on making a server where the players have a choice on whats going to be on our server and making the server easy to play and most importantly fun to play!</p>
 
           <ul>
-            <li>Economy: Buy and sell items, purchase higher ranks and gain access to new, more powerful kits.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium minus maxime laboriosam culpa deleniti error non quam consequatur odio maiores quidem autem necessitatibus expedita ut id quas, inventore velit et.</li>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam recusandae voluptate, commodi illum non veniam quaerat aperiam nesciunt magni, praesentium dolor sapiente cupiditate ex at, explicabo iusto. Eveniet, voluptatem voluptatum.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe cumque molestiae soluta optio voluptas, error, illum odit blanditiis eius id ab sequi delectus dolorem. Placeat ipsam assumenda architecto possimus nihil.</li>
+            <li><b>Economy:</b> Buy and sell items, purchase higher ranks and gain access to new, more powerful kits!</li>
+            <li><b>New Content:</b> Modded weapons, items, and vehicles are available to be found scattered about, or purchased with credits!</li>
+            <li><b>Custom Safezone:</b> A massive custom safezone with housing and apartments available for purchase and customisation!</li>
+            <li><b>Rare Items:</b> Find rare, epic, legendary and mythical loot scattered about the map and dropped from zombies!</li>
           </ul>
         </main>
 
