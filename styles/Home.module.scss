@@ -14,7 +14,13 @@ $textColour: #aaaaac;
     color: $textColour;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(97deg, #10131a 85%, $textColour 85%, $textColour calc(85% + 1px), transparent calc(85% + 1px));
+    background-image: linear-gradient(
+      97deg,
+      #10131a 85%,
+      $textColour 85%,
+      $textColour calc(85% + 1px),
+      transparent calc(85% + 1px)
+    );
     z-index: 1;
     filter: drop-shadow(2px 0px 5px black);
     font-family: "Saira Condensed";
@@ -108,7 +114,8 @@ $textColour: #aaaaac;
           align-items: center;
           background-color: #eeeeed;
 
-          svg, img {
+          svg,
+          img {
             height: 90%;
             padding-left: 15%;
             padding-right: 15%;
@@ -120,9 +127,88 @@ $textColour: #aaaaac;
         }
 
         span {
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
           color: $textColour;
           font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .main {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      background-image: none;
+      background-color: #10131a;
+      border-left: 1px solid $textColour;
+      border-right: 1px solid $textColour;
+      font-size: 1.4vmax;
+
+      #header {
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        border-bottom: solid 0.6vmax $textColour;
+        border-right: none;
+
+        .icon {
+          position: absolute;
+          z-index: -1;
+          filter: drop-shadow(0px 0px 2px $textColour);
+
+          .mask1 {
+
+            .mask2 {
+
+              img {
+                height: 15vmax;
+              }
+            }
+          }
+        }
+
+        h1 {
+          font-size: 2.5em;
+          margin-top: 10vh;
+          filter: drop-shadow(0px 0px 3px #10131a);
+        }
+      }
+
+      h3 {
+        margin-left: 1vmax;
+      }
+
+      p,
+      ul {
+        width: 90%;
+      }
+
+      #groupInformation {
+        height: 3vmax;
+        justify-content: center;
+        margin: 0;
+    
+        .group {
+          width: 30%;
+          height: 100%;
+    
+          .iconContainer {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    
+          span {
+            margin-left: auto;
+            margin-right: auto;
+            color: $textColour;
+            font-size: 1.2em;
+          }
         }
       }
     }

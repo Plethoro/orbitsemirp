@@ -28,6 +28,10 @@
       animation: 20s linear 0s infinite move1;
     }
   }
+
+  @media only screen and (max-width: 425px) {
+    display: none;
+  }
 }
 
 @keyframes move1 {
