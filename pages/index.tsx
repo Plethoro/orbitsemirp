@@ -8,7 +8,7 @@ import homePageProps from '../ssr'
 
 export const getServerSideProps: GetServerSideProps = homePageProps;
 
-const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
+const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedPlayers }) => {
   return (
     <>
       <Head>
@@ -70,7 +70,7 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers }) => {
               <div className={styles.iconContainer}>
                 <img src="unturned.png" />
               </div>
-              <span>13/24</span>
+              <span>{unturnedPlayers}</span>
             </a>
           </section>
 

@@ -11,10 +11,16 @@ const homePageProps = async (): Promise<{ props: HomepageProps }> => {
   const memberCount: number | null = discordData.data.approximate_member_count;
   const discordMembers = memberCount ? memberCount.toString() : "0";
 
+  const unturnedData: AxiosResponse<any> = await axios.get(process.env.UNTURNED_API as string);
+  const currentPlayers: number = unturnedData.data.players;
+  const maxPlayers: number = unturnedData.data.maxplayers;
+  const unturnedPlayers: string = `${currentPlayers}/${maxPlayers}`;
+
   return {
     props: {
       steamMembers,
-      discordMembers
+      discordMembers,
+      unturnedPlayers
     }
   }
 }
