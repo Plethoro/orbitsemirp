@@ -1,0 +1,63 @@
+#slideShow {
+  width: 60%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    height: 90vh;
+    transform: scale(1.1);
+
+    &.slide1 {
+      animation: 20s linear 0s infinite move4;
+    }
+
+    &.slide2 {
+      animation: 20s linear 0s infinite move3;
+    }
+
+    &.slide3 {
+      animation: 20s linear 0s infinite move2;
+    }
+
+    &.slide4 {
+      animation: 20s linear 0s infinite move1;
+    }
+  }
+}
+
+@keyframes move1 {
+  0% {margin-left: 0%; opacity: 1;}
+  20% {margin-left: -20%; opacity: 1;}
+  25% {margin-left: -25%;  opacity: 0;}
+  75% {margin-left: 25%;  opacity: 0;}
+  95% {margin-left: 5%;  opacity: 0;}
+  100% {margin-left: 0%;  opacity: 1;}
+}
+
+@keyframes move2 {
+  0% {margin-left: -50%; opacity: 1;}
+  25% {margin-left: -25%; opacity: 1;}
+  45% {margin-left: -5%; opacity: 1;}
+  50% {margin-left: 0%;  opacity: 0;}
+  100% {margin-left: 0%;  opacity: 0;}
+}
+
+@keyframes move3 {
+  0% {margin-left: 45%; opacity: 1;}
+  50% {margin-left: -5%; opacity: 1;}
+  70% {margin-left: -25%; opacity: 1;}
+  75% {margin-left: -30%;  opacity: 0;}
+  100% {margin-left: -0%;  opacity: 0;}
+}
+
+@keyframes move4 {
+  0% {margin-left: -75%; opacity: 1;}
+  75% {margin-left: -25%; opacity: 1;}
+  95% {margin-left: -5%; opacity: 1;}
+  100% {margin-left: 0%;  opacity: 0;}
+}

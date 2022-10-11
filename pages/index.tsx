@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSteam, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { HomepageProps } from '../types'
 import homePageProps from '../ssr'
+import SlideShow from '../components/SlideShow/SlideShow'
 
 export const getServerSideProps: GetServerSideProps = homePageProps;
 
@@ -83,9 +84,8 @@ const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedP
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe cumque molestiae soluta optio voluptas, error, illum odit blanditiis eius id ab sequi delectus dolorem. Placeat ipsam assumenda architecto possimus nihil.</li>
           </ul>
         </main>
-        <aside>
-          <img src='/example.jpg' />
-        </aside>
+        
+        <SlideShow />
       </div>
     </>
   )
