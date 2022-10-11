@@ -66,9 +66,13 @@ $textColour: #aaaaac;
 
     p,
     ul {
-      font-size: 1.2em;
+      font-size: 1.3em;
       width: 70%;
       margin-left: 3vw;
+
+      li {
+        margin-bottom: 1%;
+      }
     }
 
     #groupInformation {
