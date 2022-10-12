@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios"
 import { HomepageProps } from "../types"
 
-const homePageProps = async (): Promise<{ props: HomepageProps }> => {
+const homePageProps = async (): Promise<{ props: HomepageProps, revalidate: number }> => {
   const steamXml: AxiosResponse<any> = await axios.get(process.env.STEAM_API as string);
   const steamRegex: RegExp = /(?<=<memberCount>).+(?=<\/memberCount>)/;
   const steamResult: RegExpExecArray | null = steamRegex.exec(steamXml.data);
@@ -21,7 +21,8 @@ const homePageProps = async (): Promise<{ props: HomepageProps }> => {
       steamMembers,
       discordMembers,
       unturnedPlayers
-    }
+    },
+    revalidate: 180
   }
 }
 

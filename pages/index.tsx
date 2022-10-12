@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,7 +7,7 @@ import { HomepageProps } from '../types'
 import homePageProps from '../ssr'
 import SlideShow from '../components/SlideShow/SlideShow'
 
-export const getServerSideProps: GetServerSideProps = homePageProps;
+export const getStaticProps: GetStaticProps = homePageProps;
 
 const Home: NextPage<HomepageProps> = ({ steamMembers, discordMembers, unturnedPlayers }) => {
   return (
