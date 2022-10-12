@@ -2,7 +2,7 @@
   width: 100vw;
   height: 10vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   background-color: #020410;
   border-top: 1px solid #aaaaac;
@@ -10,7 +10,24 @@
   z-index: 2;
   filter: drop-shadow(0px -2px 5px black);
 
+  a {
+    height: 10vh;
+
+    img {
+      height: 90%;
+      margin: 0;
+      mix-blend-mode: lighten;
+      opacity: 0.5;
+      filter: invert(0.5) brightness(0.2);
+    }
+  }
+
   @media only screen and (max-width: 425px) {
     height: 6.5vh;
+    justify-content: center;
+
+    a {
+      height: 6.5vh;
+    }
   }
 }
