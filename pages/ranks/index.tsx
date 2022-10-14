@@ -3,8 +3,13 @@ import Head from 'next/head'
 import RankShowcase from '../../components/RankShowcase/RankShowcase'
 import styles from '../../styles/Ranks.module.scss'
 import ranks from '../../ranks.json';
+import { useState } from 'react';
+import { RankType } from '../../types';
 
 const Ranks: NextPage<{}> = () => {
+  const [selected, setSelected] = useState<number>(0);
+  const selectedRank: RankType = ranks[selected] as RankType;
+
   return (
     <>
       <Head>
@@ -39,8 +44,15 @@ const Ranks: NextPage<{}> = () => {
       </Head>
 
       <div id={styles.ranksPage}>
+        <div id={styles.backgroundImg}>
+          <div id={styles.overlay} style={{ backgroundColor: selectedRank.colour }} />
+          <img src='/slide1.png' />
+        </div>
         <RankShowcase
-          ranks={ranks}
+          ranks={ranks as RankType[]}
+          selected={selected}
+          setSelected={setSelected}
+          selectedRank={selectedRank}
         />
       </div>
     </>

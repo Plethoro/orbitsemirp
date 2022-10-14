@@ -9,4 +9,5 @@ export interface RankType {
   description: string;
   icon: string;
   kit: string[];
+  colour: string;
 }

@@ -3,6 +3,7 @@
     "title": "Vip",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
     "icon": "/ranks/vip.webp",
+    "colour": "#c0b23b",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -13,8 +14,9 @@
   },
   {
     "title": "Vip+",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, possimus quaerat expedita eligendi illo sed earum veniam, reiciendis cupiditate iure quidem iste eveniet placeat amet illum eos saepe esse sunt.",
     "icon": "/ranks/vip+.webp",
+    "colour": "#fff17b",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -25,8 +27,9 @@
   },
   {
     "title": "Omega",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam obcaecati ipsa incidunt mollitia quae illum reiciendis ullam, corporis, cumque autem assumenda placeat, earum consequatur distinctio consequuntur laboriosam? Amet, deserunt perspiciatis.",
     "icon": "/ranks/omega.webp",
+    "colour": "#f95050",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -37,8 +40,9 @@
   },
   {
     "title": "Legend",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad laboriosam quidem voluptate. Omnis, id odio recusandae magni rem unde cum. Asperiores, maiores consequatur exercitationem illo eligendi illum suscipit aperiam similique!",
     "icon": "/ranks/legend.webp",
+    "colour": "#9affee",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -49,8 +53,9 @@
   },
   {
     "title": "Supreme",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse dignissimos omnis magnam veritatis neque ab corporis totam itaque? Distinctio praesentium velit quibusdam provident maxime fugiat ex culpa tenetur doloremque.",
     "icon": "/ranks/supreme.webp",
+    "colour": "#33ffa1",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -61,8 +66,9 @@
   },
   {
     "title": "Mythic",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi atque, expedita maxime commodi doloremque delectus vitae deserunt. Eum repellendus quis ipsa, similique doloremque ipsum voluptatibus ab sit iusto tenetur dicta.",
     "icon": "/ranks/mythic.webp",
+    "colour": "#fe904b",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",

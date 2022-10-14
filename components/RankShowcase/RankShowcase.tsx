@@ -1,14 +1,15 @@
-import React, { ComponentType, useState } from 'react';
+import React, { ComponentType, useState, Dispatch, SetStateAction } from 'react';
 import { RankType } from '../../types';
 import styles from "./RankShowcase.module.scss";
 
 export interface RankShowcaseProps {
-  ranks: RankType[]
+  ranks: RankType[];
+  selected: number;
+  setSelected: Dispatch<SetStateAction<number>>;
+  selectedRank: RankType;
 }
 
-const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks }) => {
-  const [selected, setSelected] = useState<number>(0);
-  const selectedRank: RankType = ranks[selected];
+const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank }) => {
 
   return (
     <section id={styles.rankShowcase}>
