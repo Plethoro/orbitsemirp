@@ -43,11 +43,16 @@ const Ranks: NextPage<{}> = () => {
         <meta property='og:image' content="/orbit.png" />
       </Head>
 
+      <div id={styles.backgroundImg}>
+        <div id={styles.overlay} style={{ backgroundColor: selectedRank.colour }} />
+        <img src='/slide1.png' />
+      </div>
+
       <div id={styles.ranksPage}>
-        <div id={styles.backgroundImg}>
-          <div id={styles.overlay} style={{ backgroundColor: selectedRank.colour }} />
-          <img src='/slide1.png' />
+        <div className={styles.header}>
+          <h1>Available Ranks:</h1>
         </div>
+
         <RankShowcase
           ranks={ranks as RankType[]}
           selected={selected}

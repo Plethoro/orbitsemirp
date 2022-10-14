@@ -69,12 +69,13 @@
       font-family: "Saira Condensed";
       color: #eeeeed;
       background-image: linear-gradient(
-        97deg,
+        94deg,
         transparent calc(10% - 1px),
         #aaaaac calc(10% - 1px),
         #aaaaac 10%,
         #10131a 10%
       );
+      filter: drop-shadow(-2px 5px 5px black);
     }
   }
 }
