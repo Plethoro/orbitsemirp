@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
+import RankShowcase from '../../components/RankShowcase/RankShowcase'
 import styles from '../../styles/Ranks.module.scss'
 
 const Ranks: NextPage<{}> = () => {
@@ -37,7 +38,16 @@ const Ranks: NextPage<{}> = () => {
       </Head>
 
       <main id={styles.ranksPage}>
-        
+        <RankShowcase
+          ranks={[
+            { title: 'Vip' },
+            { title: 'Vip+' },
+            { title: 'Omega' },
+            { title: 'Legend' },
+            { title: 'Supreme' },
+            { title: 'Mythic' }
+          ]}
+        />
       </main>
     </>
   )

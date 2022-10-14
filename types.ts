@@ -3,3 +3,7 @@ export interface HomepageProps {
   discordMembers: string;
   unturnedPlayers: string;
 }
+
+export interface RankType {
+  title: string;
+}
