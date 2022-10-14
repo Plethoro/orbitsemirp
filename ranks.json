@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Vip",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/vip.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
+    "title": "Vip+",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/vip+.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
+    "title": "Omega",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/omega.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
+    "title": "Legend",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/legend.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
+    "title": "Supreme",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/supreme.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
+    "title": "Mythic",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
+    "icon": "/ranks/mythic.webp",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  }
+]

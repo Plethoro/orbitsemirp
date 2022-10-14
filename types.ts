@@ -6,4 +6,7 @@ export interface HomepageProps {
 
 export interface RankType {
   title: string;
+  description: string;
+  icon: string;
+  kit: string[];
 }

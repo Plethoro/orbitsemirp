@@ -1,7 +1,8 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import RankShowcase from '../../components/RankShowcase/RankShowcase'
 import styles from '../../styles/Ranks.module.scss'
+import ranks from '../../ranks.json';
 
 const Ranks: NextPage<{}> = () => {
   return (
@@ -37,18 +38,11 @@ const Ranks: NextPage<{}> = () => {
         <meta property='og:image' content="/orbit.png" />
       </Head>
 
-      <main id={styles.ranksPage}>
+      <div id={styles.ranksPage}>
         <RankShowcase
-          ranks={[
-            { title: 'Vip' },
-            { title: 'Vip+' },
-            { title: 'Omega' },
-            { title: 'Legend' },
-            { title: 'Supreme' },
-            { title: 'Mythic' }
-          ]}
+          ranks={ranks}
         />
-      </main>
+      </div>
     </>
   )
 }
