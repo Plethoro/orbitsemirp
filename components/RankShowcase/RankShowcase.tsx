@@ -9,17 +9,21 @@ export interface RankShowcaseProps {
   setSelected: Dispatch<SetStateAction<number>>;
   selectedRank: RankType;
   isLoggedIn: boolean;
-  user: any | null
+  user: any | null;
+  setShowOverlay: Dispatch<SetStateAction<boolean>>;
+  setUser: Function;
 }
 
-const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn, user }) => {
+const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn, user, setShowOverlay, setUser }) => {
   const [userRankIndex, setUserRankIndex] = useState<number>(-1);
   useEffect(() => {
-    ranks.forEach((rank, i) => {
-      if (rank.title === user.rank) {
-        setUserRankIndex(i);
-      }
-    })
+    if (user) {
+      ranks.forEach((rank, i) => {
+        if (rank.title === user.rank) {
+          setUserRankIndex(i);
+        }
+      })
+    }
   }, [user]);
 
   return (
@@ -54,8 +58,17 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
             >
               ${selectedRank.price}<sup>USD</sup>
             </h2>
-            { selected > userRankIndex && <PaypalButton cost={selectedRank.price} disabled={!isLoggedIn} rank={selectedRank.title} steamId={user ? user.id : ''} />}
-            { !(selected > userRankIndex) && <sup><i>Already Owned</i></sup>}
+            {selected > userRankIndex &&
+              <PaypalButton
+                cost={selectedRank.price}
+                disabled={!isLoggedIn}
+                rank={selectedRank.title}
+                steamId={user ? user.id : ''}
+                setShowOverlay={setShowOverlay}
+                setUser={setUser}
+              />
+            }
+            {!(selected > userRankIndex) && <sup><i>Already Owned</i></sup>}
           </div>
 
           {/* <p>{selectedRank.description}</p> */}

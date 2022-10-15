@@ -5,9 +5,11 @@ import styles from '../../styles/Ranks.module.scss'
 import ranks from '../../ranks.json';
 import { useState } from 'react';
 import { RankType } from '../../types';
+import PaymmentSuccess from '../../components/PaymentSuccess/PaymentSuccess';
 
-const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null }> = ({ isLoggedIn, user }) => {
+const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null, setUser: Function }> = ({ isLoggedIn, user, setUser }) => {
   const [selected, setSelected] = useState<number>(0);
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
   const selectedRank: RankType = ranks[selected] as RankType;
 
   return (
@@ -49,6 +51,7 @@ const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null }> = ({ isLoggedIn
       </div>
 
       <div id={styles.ranksPage}>
+        {showOverlay && <PaymmentSuccess setShowOverlay={setShowOverlay} />}
         <div className={styles.header}>
           <h1>Available Ranks:</h1>
         </div>
@@ -60,6 +63,8 @@ const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null }> = ({ isLoggedIn
           selectedRank={selectedRank}
           isLoggedIn={isLoggedIn}
           user={user}
+          setShowOverlay={setShowOverlay}
+          setUser={setUser}
         />
       </div>
     </>

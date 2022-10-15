@@ -1,4 +1,4 @@
-import React, { ComponentType } from 'react';
+import React, { ComponentType, Dispatch, SetStateAction } from 'react';
 import styles from "./PaypalButton.module.scss";
 import {
   PayPalScriptProvider,
@@ -6,7 +6,7 @@ import {
 } from "@paypal/react-paypal-js";
 import axios from 'axios';
 
-const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: string, steamId: string }> = ({ cost, disabled, rank, steamId }) => {
+const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: string, steamId: string, setShowOverlay: Dispatch<SetStateAction<boolean>>, setUser: Function }> = ({ cost, disabled, rank, steamId, setShowOverlay, setUser }) => {
   return (
     <PayPalScriptProvider
       options={{
@@ -50,7 +50,21 @@ const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: strin
         onApprove={function (data, actions) {
           return actions.order?.capture().then(function () {
             // Your code here after capture the order
-            axios.post('/api/users/updateRank', { steamId, newRank: rank });
+            axios.post('/api/users/updateRank', { steamId, newRank: rank })
+              .then(() => {
+                const cookies = document.cookie.split(';');
+                cookies.forEach((cookie) => {
+                  const crumbs = cookie.split('=');
+
+                  if (crumbs[0] === 'user') {
+                    const newUser = JSON.parse(crumbs[1]);
+                    newUser.rank = rank;
+                    document.cookie = `user=${JSON.stringify(newUser)}`;
+                    setUser(newUser);
+                  }
+                })
+                setShowOverlay(true);
+              });
           });
         }}
       />

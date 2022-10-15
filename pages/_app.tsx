@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NavBar isLoggedIn={isLoggedIn} user={user} />
-      <Component {...pageProps} isLoggedIn={isLoggedIn} user={user} />
+      <Component {...pageProps} isLoggedIn={isLoggedIn} user={user} setUser={setUser} />
       <Footer />
     </>
   )

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { ComponentType } from 'react';
 import styles from "./Navbar.module.scss";
 
@@ -8,6 +9,8 @@ const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn,
         <source src="/banner.mp4" type="video/mp4" />
       </video>
     </div>
+
+    <Link className={styles.push} href={'/ranks'}>Ranks</Link>
 
     {!isLoggedIn && (<a href='/api/auth/login'>Login</a>)}
     {isLoggedIn && (
