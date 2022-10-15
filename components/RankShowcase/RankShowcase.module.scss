@@ -76,6 +76,28 @@
         #10131a 10%
       );
       filter: drop-shadow(-2px 5px 5px black);
+
+      #rankPaymenet {
+        display: flex;
+        align-items: center;
+        margin-top: 5%;
+
+        h2 {
+          font-family: "Play";
+          margin: 0;
+          margin-right: 2%;
+          font-size: 1.8em;
+
+          &.price {
+            transition: background-colour 0.35s;
+            background-color: transparent;
+            padding-left: 1vmin;
+            padding-right: 1vmin;
+            border-radius: 5px;
+            color: #10131a;
+          }
+        }
+      }
     }
   }
 }

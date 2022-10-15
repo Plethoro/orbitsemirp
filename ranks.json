@@ -4,6 +4,7 @@
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, ea optio! Mollitia, voluptate. Magnam, enim! Maxime cupiditate libero perferendis praesentium similique, itaque nam maiores a ea dolor quaerat, reiciendis alias.",
     "icon": "/ranks/vip.webp",
     "colour": "#bbbbbb",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -17,6 +18,7 @@
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
     "icon": "/ranks/vip.webp",
     "colour": "#c0b23b",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -30,6 +32,7 @@
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, possimus quaerat expedita eligendi illo sed earum veniam, reiciendis cupiditate iure quidem iste eveniet placeat amet illum eos saepe esse sunt.",
     "icon": "/ranks/vip+.webp",
     "colour": "#fff17b",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -43,6 +46,7 @@
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam obcaecati ipsa incidunt mollitia quae illum reiciendis ullam, corporis, cumque autem assumenda placeat, earum consequatur distinctio consequuntur laboriosam? Amet, deserunt perspiciatis.",
     "icon": "/ranks/omega.webp",
     "colour": "#f95050",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -56,6 +60,7 @@
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad laboriosam quidem voluptate. Omnis, id odio recusandae magni rem unde cum. Asperiores, maiores consequatur exercitationem illo eligendi illum suscipit aperiam similique!",
     "icon": "/ranks/legend.webp",
     "colour": "#9affee",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -69,6 +74,7 @@
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse dignissimos omnis magnam veritatis neque ab corporis totam itaque? Distinctio praesentium velit quibusdam provident maxime fugiat ex culpa tenetur doloremque.",
     "icon": "/ranks/supreme.webp",
     "colour": "#33ffa1",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
@@ -82,6 +88,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi atque, expedita maxime commodi doloremque delectus vitae deserunt. Eum repellendus quis ipsa, similique doloremque ipsum voluptatibus ab sit iusto tenetur dicta.",
     "icon": "/ranks/mythic.webp",
     "colour": "#fe904b",
+    "price": "5.00",
     "kit": [
       "Lorem x 1",
       "Ipsum x 100",
