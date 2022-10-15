@@ -1,5 +1,18 @@
 [
   {
+    "title": "R",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, ea optio! Mollitia, voluptate. Magnam, enim! Maxime cupiditate libero perferendis praesentium similique, itaque nam maiores a ea dolor quaerat, reiciendis alias.",
+    "icon": "/ranks/vip.webp",
+    "colour": "#bbbbbb",
+    "kit": [
+      "Lorem x 1",
+      "Ipsum x 100",
+      "Dolor x 50",
+      "Sit x 25",
+      "Amet x 5000"
+    ]
+  },
+  {
     "title": "Vip",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
     "icon": "/ranks/vip.webp",
