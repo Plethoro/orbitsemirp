@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  steam_id String
+  username String?
+  icon     String?
+  rank     rank?   @default(Free)
+  id       Int     @id @default(autoincrement())
+}
+
+enum rank {
+  Free
+  R
+  Vip
+  Vip_    @map("Vip+")
+  Omega
+  Legend
+  Supreme
+  Mythic
+  Custom
+}

@@ -4,8 +4,9 @@ import {
   PayPalScriptProvider,
   PayPalButtons,
 } from "@paypal/react-paypal-js";
+import axios from 'axios';
 
-const PaypalButton: ComponentType<{ cost: string, disabled: boolean }> = ({ cost, disabled }) => {
+const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: string, steamId: string }> = ({ cost, disabled, rank, steamId }) => {
   return (
     <PayPalScriptProvider
       options={{
@@ -49,6 +50,7 @@ const PaypalButton: ComponentType<{ cost: string, disabled: boolean }> = ({ cost
         onApprove={function (data, actions) {
           return actions.order?.capture().then(function () {
             // Your code here after capture the order
+            axios.post('/api/users/updateRank', { steamId, newRank: rank });
           });
         }}
       />

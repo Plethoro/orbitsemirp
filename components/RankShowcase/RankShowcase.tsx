@@ -1,4 +1,4 @@
-import React, { ComponentType, useState, Dispatch, SetStateAction } from 'react';
+import React, { ComponentType, useState, Dispatch, SetStateAction, useEffect } from 'react';
 import { RankType } from '../../types';
 import PaypalButton from '../PaypalButton/PaypalButton';
 import styles from "./RankShowcase.module.scss";
@@ -9,9 +9,18 @@ export interface RankShowcaseProps {
   setSelected: Dispatch<SetStateAction<number>>;
   selectedRank: RankType;
   isLoggedIn: boolean;
+  user: any | null
 }
 
-const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn }) => {
+const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn, user }) => {
+  const [userRankIndex, setUserRankIndex] = useState<number>(-1);
+  useEffect(() => {
+    ranks.forEach((rank, i) => {
+      if (rank.title === user.rank) {
+        setUserRankIndex(i);
+      }
+    })
+  }, [user]);
 
   return (
     <section id={styles.rankShowcase}>
@@ -45,10 +54,11 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
             >
               ${selectedRank.price}<sup>USD</sup>
             </h2>
-            <PaypalButton cost={selectedRank.price} disabled={!isLoggedIn} />
+            { selected > userRankIndex && <PaypalButton cost={selectedRank.price} disabled={!isLoggedIn} rank={selectedRank.title} steamId={user ? user.id : ''} />}
+            { !(selected > userRankIndex) && <sup><i>Already Owned</i></sup>}
           </div>
 
-          <p>{selectedRank.description}</p>
+          {/* <p>{selectedRank.description}</p> */}
           <ul>
             {
               selectedRank.details.map((detail, i) => {

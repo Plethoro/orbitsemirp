@@ -101,6 +101,13 @@
             font-size: 0.3em;
           }
         }
+
+        sup {
+          font-family: "Play";
+          font-size: 0.8em;
+          mix-blend-mode: lighten;
+          opacity: 0.5;
+        }
       }
     }
   }

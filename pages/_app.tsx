@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 import { NextRouter, useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { SteamLoginData } from '../types'
+import axios from 'axios'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -17,15 +18,24 @@ function MyApp({ Component, pageProps }: AppProps) {
       const orbitUser = {
         id: userData.id,
         name: userData._json.personaname,
-        rank: "free",
+        rank: "Free",
         icon: userData._json.avatarmedium
       }
 
-      document.cookie = `user=${JSON.stringify(orbitUser)}`;
-      setIsLoggedIn(true);
-      setUser(orbitUser);
+      axios.post('/api/users/new', { newUser: orbitUser })
+        .then((res) => {
+          const newUser: any = res.data.user;
+          orbitUser.rank = newUser.rank;
 
-      router.push('/');
+          document.cookie = `user=${JSON.stringify(orbitUser)}`;
+          setIsLoggedIn(true);
+          setUser(orbitUser);
+
+          router.push('/');
+        })
+        .catch(() => {
+          router.push('/');
+        })
     }
   }, [router.query]);
 
@@ -45,7 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NavBar isLoggedIn={isLoggedIn} user={user} />
-      <Component {...pageProps} isLoggedIn={isLoggedIn} />
+      <Component {...pageProps} isLoggedIn={isLoggedIn} user={user} />
       <Footer />
     </>
   )
