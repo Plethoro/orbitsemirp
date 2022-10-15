@@ -15,7 +15,6 @@
   .videoContainer {
     width: fit-content;
     mask: linear-gradient(90deg, black 90%, transparent 100%);
-  
 
     video {
       height: 440%;
@@ -30,6 +29,15 @@
     align-items: center;
     margin-right: 1vw;
 
+    svg {
+      height: 4vh;
+      margin-right: -0.75vw;
+
+      path {
+        fill: #aaaaac;
+      }
+    }
+
     a {
       color: #aaaaac;
       font-size: 2em;
@@ -42,7 +50,7 @@
         filter: drop-shadow(0px 0px 5px black);
       }
     }
-  
+
     #userInfoContainer {
       width: fit-content;
       height: 8vh;
@@ -52,7 +60,7 @@
       background-color: #10131a;
       border-radius: 50px;
       margin-right: 1vw;
-      
+
       div {
         width: fit-content;
         height: 80%;
@@ -81,7 +89,6 @@
         margin-left: 1vw;
       }
     }
-    
   }
 
   @media only screen and (max-width: 425px) {

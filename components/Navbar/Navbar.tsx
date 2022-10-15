@@ -2,9 +2,11 @@ import Link from 'next/link';
 import React, { ComponentType } from 'react';
 import styles from "./Navbar.module.scss";
 import ranks from '../../ranks.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSteam } from '@fortawesome/free-brands-svg-icons';
 
 const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn, user }) => {
-  let selectedRank: any = { colour: 'red' };
+  let selectedRank: any = { colour: 'white' };
 
   ranks.forEach((rank) => {
     if (user) {
@@ -27,7 +29,7 @@ const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn,
       <div className={styles.linksContainer}>
         <Link href={'/ranks'}>Ranks</Link>
 
-        {!isLoggedIn && (<Link href='/api/auth/login'>Login</Link>)}
+        {!isLoggedIn && (<><FontAwesomeIcon icon={faSteam} /><Link href='/api/auth/login'>Login</Link></>)}
         {isLoggedIn && (
           <div id={styles.userInfoContainer}>
             <div>
