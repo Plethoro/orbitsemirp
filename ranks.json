@@ -5,12 +5,9 @@
     "icon": "/ranks/vip.webp",
     "colour": "#bbbbbb",
     "price": "2.50",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/Vault Size 6x6",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -19,12 +16,11 @@
     "icon": "/ranks/vip.webp",
     "colour": "#c0b23b",
     "price": "5.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/Vault Size 6x10",
+      "15k Credits",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -33,12 +29,14 @@
     "icon": "/ranks/vip+.webp",
     "colour": "#fff17b",
     "price": "12.50",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 10 hour",
+      "/heal 1 hour",
+      "/Vault Size 10x10",
+      "25k Credits",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -47,12 +45,18 @@
     "icon": "/ranks/omega.webp",
     "colour": "#f95050",
     "price": "25.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 5 hour ",
+      "/heal every 20 minutes ",
+      "/Vault Size 12x14",
+      "/day 1 hour cooldown",
+      "/weather clear  1 hour cooldown",
+      "/airdrop every 10 hour",
+      "50k Credits",
+      "/kit Omega rank 30 minutes cooldown",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -61,12 +65,19 @@
     "icon": "/ranks/legend.webp",
     "colour": "#9affee",
     "price": "40.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 1 hour 45 minutes cooldown",
+      "/heal every 6 minutes cooldown",
+      "/Vault Size 14x18",
+      "/day 10 minutes cooldown",
+      "/weather clear 10 minutes cooldown",
+      "/airdrop every 3 hour 30 minutes",
+      "100k Credits",
+      "/kit legend rank 30 minutes cooldown",
+      "/kit Omega rank 30 minutes cooldown",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -75,12 +86,20 @@
     "icon": "/ranks/supreme.webp",
     "colour": "#33ffa1",
     "price": "60.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 1 hour cooldown",
+      "/heal every 3 minutes cooldown",
+      "/Vault Size 16x20",
+      "/day 10 minutes cooldown",
+      "/weather clear 10 minutes cooldown",
+      "/airdrop every 2 hour",
+      "125k Credits",
+      "/kit Supreme rank 30 minutes cooldown",
+      "/kit legend rank 30 minutes cooldown",
+      "/kit Omega rank 30 minutes cooldown",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -89,12 +108,21 @@
     "icon": "/ranks/mythic.webp",
     "colour": "#fe904b",
     "price": "80.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 30 minutes cooldown",
+      "/heal every 1.5 minutes cooldown",
+      "/Vault Size 32x32",
+      "/day 10 minutes cooldown",
+      "/weather clear 10 minutes cooldown",
+      "/airdrop every 1 hour 30 minutes",
+      "150k Credits",
+      "/kit Mythic Rank 30 minutes cooldown",
+      "/kit Supreme rank 30 minutes cooldown",
+      "/kit legend rank 30 minutes cooldown",
+      "/kit Omega rank 30 minutes cooldown",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown"
     ]
   },
   {
@@ -103,12 +131,23 @@
     "icon": "/ranks/mythic.webp",
     "colour": "#aaaaff",
     "price": "100.00",
-    "kit": [
-      "Lorem x 1",
-      "Ipsum x 100",
-      "Dolor x 50",
-      "Sit x 25",
-      "Amet x 5000"
+    "details": [
+      "/v every 15 minutes cooldown",
+      "/heal every 1 minutes cooldown",
+      "/Vault Size 55x55",
+      "/day 10 minutes cooldown",
+      "/airdrop every 1 hour",
+      "200k Credits",
+      "/weather clear 10 minutes cooldown",
+      "/kit Custom rank 30 minutes cooldown",
+      "/kit Mythic Rank 30 minutes cooldown",
+      "/kit Supreme rank 30 minutes cooldown",
+      "/kit legend rank 30 minutes cooldown",
+      "/kit Omega rank 30 minutes cooldown",
+      "/kit Vip+ 30 minutes cooldown",
+      "/kit Vip 30 minutes cooldown",
+      "/kit R 30 minutes cooldown",
+      "Name UR OWN RANK (NO NSFW)"
     ]
   }
 ]

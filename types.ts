@@ -8,7 +8,7 @@ export interface RankType {
   title: string;
   description: string;
   icon: string;
-  kit: string[];
+  details: string[];
   colour: string;
   price: string;
 }

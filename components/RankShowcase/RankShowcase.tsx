@@ -42,7 +42,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
               className={styles.price}
               style={{ backgroundColor: selectedRank.colour }}
             >
-              ${selectedRank.price}
+              ${selectedRank.price}<sup>USD</sup>
             </h2>
             <PaypalButton cost={selectedRank.price} />
           </div>
@@ -50,9 +50,9 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
           <p>{selectedRank.description}</p>
           <ul>
             {
-              selectedRank.kit.map((item, i) => {
+              selectedRank.details.map((detail, i) => {
                 return (
-                  <li key={i}>{item}</li>
+                  <li key={i}>{detail}</li>
                 )
               })
             }
