@@ -4,11 +4,13 @@ import styles from "./Navbar.module.scss";
 import ranks from '../../ranks.json';
 
 const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn, user }) => {
-  let selectedRank: any = {colour: 'red'};
+  let selectedRank: any = { colour: 'red' };
 
   ranks.forEach((rank) => {
-    if (rank.title === user.rank) {
-      selectedRank = rank
+    if (user) {
+      if (rank.title === user.rank) {
+        selectedRank = rank
+      }
     }
   })
 
