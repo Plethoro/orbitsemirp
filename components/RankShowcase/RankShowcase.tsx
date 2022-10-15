@@ -66,12 +66,12 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
         </div>
 
         <div id={styles.rankContent}>
-          <h3 style={{ opacity: selected > userRankIndex ? 1 : 0 }}><i>Upgrade to</i></h3>
+          <h3 style={{ opacity: userRankPrice > 0 && selected > userRankIndex ? 1 : 0 }}><i>Upgrade to</i></h3>
           <div id={styles.rankPaymenet}>
             <h2><b>{selectedRank.title}</b></h2>
 
             <div className={styles.priceContainer}>
-              {userRankPrice && (selected > userRankIndex) &&
+              {userRankPrice > 0 && (selected > userRankIndex) &&
                 <h3
                   className={styles.price}
                   style={{ backgroundColor: selectedRank.colour }}
@@ -84,14 +84,14 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 className={styles.price}
                 style={{ backgroundColor: selectedRank.colour }}
               >
-                ${userRankPrice && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
+                ${userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
                 <sup className={styles.currency}>USD</sup>
               </h2>
             </div>
 
             {selected > userRankIndex &&
               <PaypalButton
-                cost={userRankPrice && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
+                cost={userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
                 disabled={!isLoggedIn}
                 rank={selectedRank.title}
                 steamId={user ? user.id : ''}
