@@ -6,7 +6,7 @@ import ranks from '../../ranks.json';
 import { useState } from 'react';
 import { RankType } from '../../types';
 
-const Ranks: NextPage<{}> = () => {
+const Ranks: NextPage<{ isLoggedIn: boolean }> = ({ isLoggedIn }) => {
   const [selected, setSelected] = useState<number>(0);
   const selectedRank: RankType = ranks[selected] as RankType;
 
@@ -58,6 +58,7 @@ const Ranks: NextPage<{}> = () => {
           selected={selected}
           setSelected={setSelected}
           selectedRank={selectedRank}
+          isLoggedIn={isLoggedIn}
         />
       </div>
     </>

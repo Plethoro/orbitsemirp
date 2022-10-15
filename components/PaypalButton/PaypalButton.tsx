@@ -5,7 +5,7 @@ import {
   PayPalButtons,
 } from "@paypal/react-paypal-js";
 
-const PaypalButton: ComponentType<{ cost: string }> = ({ cost }) => {
+const PaypalButton: ComponentType<{ cost: string, disabled: boolean }> = ({ cost, disabled }) => {
   return (
     <PayPalScriptProvider
       options={{
@@ -18,14 +18,14 @@ const PaypalButton: ComponentType<{ cost: string }> = ({ cost }) => {
         style={
           {
             layout: 'horizontal',
-            label: 'buynow',
-            color: 'blue',
+            label: disabled ? undefined : 'buynow',
+            color: disabled ? 'black' : 'blue',
             tagline: false,
             shape: 'pill',
           }
         }
         className={styles.paypalButton}
-        disabled={false}
+        disabled={disabled}
         forceReRender={[cost]}
         fundingSource={undefined}
         createOrder={(data, actions) => {

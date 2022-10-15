@@ -1,7 +1,7 @@
 import React, { ComponentType } from 'react';
 import styles from "./Navbar.module.scss";
 
-const NavBar: ComponentType<{}> = () => (
+const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn, user }) => (
   <header id={styles.navbar}>
     <div>
       <video autoPlay playsInline muted loop>
@@ -9,7 +9,10 @@ const NavBar: ComponentType<{}> = () => (
       </video>
     </div>
 
-    <a href='/api/auth/login'>Login</a>
+    {!isLoggedIn && (<a href='/api/auth/login'>Login</a>)}
+    {isLoggedIn && (
+      <img src={user.icon} />
+    )}
   </header>
 )
 

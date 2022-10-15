@@ -8,9 +8,10 @@ export interface RankShowcaseProps {
   selected: number;
   setSelected: Dispatch<SetStateAction<number>>;
   selectedRank: RankType;
+  isLoggedIn: boolean;
 }
 
-const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank }) => {
+const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn }) => {
 
   return (
     <section id={styles.rankShowcase}>
@@ -44,7 +45,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
             >
               ${selectedRank.price}<sup>USD</sup>
             </h2>
-            <PaypalButton cost={selectedRank.price} />
+            <PaypalButton cost={selectedRank.price} disabled={!isLoggedIn} />
           </div>
 
           <p>{selectedRank.description}</p>
