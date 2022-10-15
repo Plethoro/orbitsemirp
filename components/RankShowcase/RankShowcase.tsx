@@ -14,13 +14,29 @@ export interface RankShowcaseProps {
   setUser: Function;
 }
 
+const generatePrice = (price: string, userRankPrice: number): string => {
+  const priceNumber = Number(price);
+  let priceString: string = `${Number(priceNumber) - userRankPrice}`;
+
+  if (priceString.endsWith('.5')) {
+    priceString += '0';
+  } else {
+    priceString += '.00';
+  }
+
+  return priceString;
+}
+
 const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSelected, selectedRank, isLoggedIn, user, setShowOverlay, setUser }) => {
   const [userRankIndex, setUserRankIndex] = useState<number>(-1);
+  const [userRankPrice, setUserRankPrice] = useState<number>(0);
+
   useEffect(() => {
     if (user) {
       ranks.forEach((rank, i) => {
         if (rank.title === user.rank) {
           setUserRankIndex(i);
+          setUserRankPrice(Number(rank.price));
         }
       })
     }
@@ -50,17 +66,32 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
         </div>
 
         <div id={styles.rankContent}>
+          <h3 style={{ opacity: selected > userRankIndex ? 1 : 0 }}><i>Upgrade to</i></h3>
           <div id={styles.rankPaymenet}>
             <h2><b>{selectedRank.title}</b></h2>
-            <h2
-              className={styles.price}
-              style={{ backgroundColor: selectedRank.colour }}
-            >
-              ${selectedRank.price}<sup className={styles.currency}>USD</sup>
-            </h2>
+
+            <div className={styles.priceContainer}>
+              {userRankPrice && (selected > userRankIndex) &&
+                <h3
+                  className={styles.price}
+                  style={{ backgroundColor: selectedRank.colour }}
+                >
+                  ${selectedRank.price}
+                </h3>
+              }
+
+              <h2
+                className={styles.price}
+                style={{ backgroundColor: selectedRank.colour }}
+              >
+                ${userRankPrice && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
+                <sup className={styles.currency}>USD</sup>
+              </h2>
+            </div>
+
             {selected > userRankIndex &&
               <PaypalButton
-                cost={selectedRank.price}
+                cost={userRankPrice && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
                 disabled={!isLoggedIn}
                 rank={selectedRank.title}
                 steamId={user ? user.id : ''}
@@ -68,6 +99,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 setUser={setUser}
               />
             }
+
             {!(selected > userRankIndex) && <sup className={styles.owned}><i>Already Owned</i></sup>}
           </div>
 
