@@ -11,8 +11,8 @@ passport.deserializeUser(function(obj: any, done) {
 
 // @ts-ignore
 passport.use(new SteamStrategy({
-	returnURL: `http://localhost:3001/api/auth/return`,
-	realm: `http://localhost:3001`,
+	returnURL: `${process.env.DOMAIN}/api/auth/return`,
+	realm: process.env.DOMAIN,
 	apiKey: `${process.env.STEAM_API_KEY}`
   
 }, (_: any, profile: any, done: any) => {

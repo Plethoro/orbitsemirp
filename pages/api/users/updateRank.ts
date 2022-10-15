@@ -20,7 +20,7 @@ export default async function handler(
         steam_id: steamId
       },
       data: {
-        rank: newRank
+        rank: newRank as any
       }
     })
 

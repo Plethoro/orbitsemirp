@@ -9,6 +9,6 @@ const path = "/api/auth/return";
 
 export default router
   .use(path, passport.authenticate("steam", { failureRedirect: "/" }))
-  .get(path, (req, res) => {
+  .get(path, (req: any, res) => {
     res.redirect(`/?user=${JSON.stringify(req.user)}`)
   });

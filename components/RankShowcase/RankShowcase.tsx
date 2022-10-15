@@ -56,7 +56,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
               className={styles.price}
               style={{ backgroundColor: selectedRank.colour }}
             >
-              ${selectedRank.price}<sup>USD</sup>
+              ${selectedRank.price}<sup className={styles.currency}>USD</sup>
             </h2>
             {selected > userRankIndex &&
               <PaypalButton
@@ -68,7 +68,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 setUser={setUser}
               />
             }
-            {!(selected > userRankIndex) && <sup><i>Already Owned</i></sup>}
+            {!(selected > userRankIndex) && <sup className={styles.owned}><i>Already Owned</i></sup>}
           </div>
 
           {/* <p>{selectedRank.description}</p> */}

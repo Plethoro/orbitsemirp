@@ -81,6 +81,8 @@
         display: flex;
         align-items: center;
         margin-top: 5%;
+        min-height: fit-content;
+        height: 10vh;
 
         h2 {
           font-family: "Play";
@@ -97,12 +99,12 @@
             color: #10131a;
           }
 
-          sup {
+          .currency {
             font-size: 0.3em;
           }
         }
 
-        sup {
+        .owned {
           font-family: "Play";
           font-size: 0.8em;
           mix-blend-mode: lighten;
