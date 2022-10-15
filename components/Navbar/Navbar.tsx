@@ -8,6 +8,8 @@ const NavBar: ComponentType<{}> = () => (
         <source src="/banner.mp4" type="video/mp4" />
       </video>
     </div>
+
+    <a href='/api/auth/login'>Login</a>
   </header>
 )
 

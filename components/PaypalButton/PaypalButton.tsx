@@ -45,6 +45,7 @@ const PaypalButton: ComponentType<{ cost: string }> = ({ cost }) => {
               return orderId;
             });
         }}
+        // @ts-ignore
         onApprove={function (data, actions) {
           return actions.order?.capture().then(function () {
             // Your code here after capture the order
