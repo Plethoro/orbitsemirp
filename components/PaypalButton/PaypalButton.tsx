@@ -11,7 +11,7 @@ const PaypalButton: ComponentType<{ cost: string }> = ({ cost }) => {
       options={{
         "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT as string,
         components: 'buttons',
-        currency: 'CAD'
+        currency: 'USD'
       }}
     >
       <PayPalButtons
@@ -34,7 +34,7 @@ const PaypalButton: ComponentType<{ cost: string }> = ({ cost }) => {
               purchase_units: [
                 {
                   amount: {
-                    currency_code: 'CAD',
+                    currency_code: 'USD',
                     value: cost,
                   },
                 },
