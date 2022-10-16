@@ -1,12 +1,16 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../../styles/IndividualSets.module.scss'
 import sets from '../../sets.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import individualSetsProps from '../../ssr/individualSets'
+import { SetType } from '../../types'
 
-const Sets: NextPage<{}> = () => {
+export const getServerSideProps: GetServerSideProps = individualSetsProps;
+
+const Sets: NextPage<{ set: SetType }> = ({ set }) => {
   return (
     <>
       <Head>
@@ -50,11 +54,34 @@ const Sets: NextPage<{}> = () => {
           <Link href='/sets'>
             <a>
               <h1>
-                <FontAwesomeIcon icon={faArrowLeftLong} />Kits
+                <FontAwesomeIcon icon={faArrowLeftLong} />Sets
               </h1>
             </a>
           </Link>
         </div>
+
+        <main id={styles.setInfo}>
+          <div id={styles.setIcon}>
+            <img src={set.image} />
+          </div>
+
+          <section id={styles.setDetails}>
+            <div id={styles.setPrice}>
+              <h2><b>{set.title}</b></h2>
+
+              <div className={styles.priceContainer}>
+                <h2
+                  className={styles.price}
+                >
+                  <span>
+                    ${set.price}
+                  </span>
+                  <sup className={styles.currency}>USD</sup>
+                </h2>
+              </div>              
+            </div>
+          </section>
+        </main>
       </div>
     </>
   )
