@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Standard",
+    "image": "/sets/standard.png",
+    "price": "10.00"
+  },
+  {
+    "title": "General",
+    "image": "/sets/general.png",
+    "price": "12.50"
+  },
+  {
+    "title": "Squad Leader",
+    "image": "/sets/squadleader.png",
+    "price": "15.00"
+  }
+]

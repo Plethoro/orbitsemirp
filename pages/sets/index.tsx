@@ -1,12 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../../styles/Kits.module.scss'
+import styles from '../../styles/Sets.module.scss'
+import sets from '../../sets.json'
+import { SetType } from '../../types'
+import Set from '../../components/Set/Set'
 
-const Home: NextPage<{}> = () => {
+const Sets: NextPage<{}> = () => {
   return (
     <>
       <Head>
-        <title>Kits | Orbit Semi-Rp</title>
+        <title>Sets | Orbit Semi-Rp</title>
         <meta name="description" content="Orbit Semi-RP is a new upcoming server , with a custom map and soon custom mods . We plan on making a server where the players have a choice on whats going to be on our server and making the server easy to play and most importantly fun to play!" />
         <link rel="icon" href="a/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="/meta/apple-icon-57x57.png" />
@@ -41,11 +44,19 @@ const Home: NextPage<{}> = () => {
         <img src={`/slide3.png`} />
       </div>
 
-      <div id={styles.kitsPage}>
+      <div id={styles.setsPage}>
+        <div className={styles.header}>
+          <h1>Available Sets:</h1>
+        </div>
 
+        <main className={styles.setsShowcase}>
+          {sets.map((set: SetType) => {
+            return <Set set={set} />
+          })}
+        </main>
       </div>
     </>
   )
 }
 
-export default Home
+export default Sets

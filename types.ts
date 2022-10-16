@@ -13,6 +13,12 @@ export interface RankType {
   price: string;
 }
 
+export interface SetType {
+  title: string;
+  image: string;
+  price: string;
+}
+
 export interface SteamLoginData {
   provider: string,
   _json: {
