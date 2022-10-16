@@ -9,7 +9,6 @@ import PaymmentSuccess from '../../components/PaymentSuccess/PaymentSuccess';
 
 const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null, setUser: Function }> = ({ isLoggedIn, user, setUser }) => {
   const [selected, setSelected] = useState<number>(0);
-  const [backgroundSlide] = useState<number>(Math.ceil(Math.random() * 4));
   const [showOverlay, setShowOverlay] = useState<boolean>(false);
   const selectedRank: RankType = ranks[selected] as RankType;
 
@@ -48,7 +47,7 @@ const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null, setUser: Function
 
       <div id={styles.backgroundImg}>
         <div id={styles.overlay} style={{ backgroundColor: selectedRank.colour }} />
-        <img src={`/slide${backgroundSlide}.png`} />
+        <img src={`/slide2.png`} />
       </div>
 
       <div id={styles.ranksPage}>
