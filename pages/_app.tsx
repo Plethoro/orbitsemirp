@@ -22,6 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         icon: userData._json.avatarmedium
       }
 
+      console.log(router.query.user)
+
       axios.post('/api/users/new', { newUser: orbitUser })
         .then((res) => {
           const newUser: UserData = res.data.user;
@@ -33,7 +35,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           router.push('/');
         })
-        .catch(() => {
+        .catch((err) => {
+          console.log(err)
           router.push('/');
         })
     }

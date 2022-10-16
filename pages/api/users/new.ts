@@ -13,6 +13,7 @@ export default async function handler(
 ) {
   try {
     const newUser: any = req.body.newUser;
+    let purchasedSets: { name: string }[] = [];
 
     let user: users | null = await prisma.users.findFirst({
       where: {
@@ -28,9 +29,22 @@ export default async function handler(
           username: newUser.name
         }
       })
+    } else {
+      purchasedSets = await prisma.sets.findMany({
+        where: {
+          user_id: user?.id
+        },
+        select: {
+          name: true,
+        }
+      })
     }
 
-    res.status(200).send({ user } as any);
+    const userWithSets = { ...user, sets: purchasedSets };
+    // @ts-ignore
+    userWithSets.rank = userWithSets.rank?.replace('_', '+');
+
+    res.status(200).send({ user: userWithSets } as any);
   }
   catch {
     res.status(500).send({ name: 'failed' });
