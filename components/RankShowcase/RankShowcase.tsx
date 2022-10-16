@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { ComponentType, useState, Dispatch, SetStateAction, useEffect } from 'react';
 import { RankType } from '../../types';
 import PaypalButton from '../PaypalButton/PaypalButton';
@@ -84,7 +85,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 className={styles.price}
                 style={{ backgroundColor: selectedRank.colour }}
               >
-                <span style={{ textDecoration: !(selected > userRankIndex) ? 'line-through': '' }}>
+                <span style={{ textDecoration: !(selected > userRankIndex) ? 'line-through' : '' }}>
                   ${userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
                 </span>
                 <sup className={styles.currency}>USD</sup>
@@ -106,6 +107,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
           </div>
 
           {/* <p>{selectedRank.description}</p> */}
+
           <ul>
             {
               selectedRank.details.map((detail, i) => {

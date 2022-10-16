@@ -27,6 +27,7 @@ const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn,
       </Link>
 
       <div className={styles.linksContainer}>
+        <Link href={'/kits'}>Kits</Link>
         <Link href={'/ranks'}>Ranks</Link>
 
         {!isLoggedIn && (<><FontAwesomeIcon icon={faSteam} /><Link href='/api/auth/login'>Login</Link></>)}
