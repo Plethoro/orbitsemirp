@@ -35,8 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           router.push('/');
         })
-        .catch((err) => {
-          console.log(err)
+        .catch(() => {
           router.push('/');
         })
     }

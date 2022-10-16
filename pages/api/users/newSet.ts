@@ -1,5 +1,4 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { sets } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma';
 import nodemailer from 'nodemailer'
@@ -17,7 +16,7 @@ export default async function handler(
     const steamId: number = req.body.steamId;
     const setName: string = req.body.setName;
 
-    const newSet: sets = await prisma.sets.create({
+    const newSet = await prisma.sets.create({
       data: {
         user_id: userId,
         name: setName

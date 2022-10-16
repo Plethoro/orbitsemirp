@@ -1,5 +1,4 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { sets, users } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma';
 
@@ -14,7 +13,7 @@ export default async function handler(
   try {
     const steamId: string = req.body.steamId;
 
-    const user: users | null = await prisma.users.findFirst({
+    const user = await prisma.users.findFirst({
       where: {
         steam_id: steamId
       }
