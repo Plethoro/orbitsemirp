@@ -12,30 +12,47 @@
   backdrop-filter: blur(1vmin);
   z-index: 100;
 
-  h1, h3 {
-    color: #aaaaac;
-    font-family: 'Play';
-    margin: 0;
-    font-size: 7vmin;
-    filter: drop-shadow(0px 0px 5px rbga(0, 0, 0, 0.5));
+  #grain {
+    position: absolute;
+    backdrop-filter: blur(1vmin);
+    opacity: 0.2;
+    mix-blend-mode: multiply;
   }
 
-  h3 {
-    margin: 2vmin;
-    font-size: 2vmin;
-  }
-
-  button {
-    font-size: 3vmin;
-    color: #aaaaac;
-    background-color: #10131a;
-    border: none;
-    padding: 1vmin;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover {
+  #details {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h1,
+    h3 {
+      color: #aaaaac;
+      font-family: "Play";
+      margin: 0;
+      font-size: 7vmin;
       filter: drop-shadow(0px 0px 5px black);
     }
+
+    h3 {
+      margin: 2vmin;
+      font-size: 2vmin;
+    }
+
+    button {
+      font-size: 3vmin;
+      color: #aaaaac;
+      background-color: #10131a;
+      border: none;
+      padding: 1vmin;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        filter: drop-shadow(0px 0px 5px black);
+      }
+    }
   }
+
 }

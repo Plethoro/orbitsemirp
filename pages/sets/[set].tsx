@@ -8,10 +8,13 @@ import Link from 'next/link'
 import individualSetsProps from '../../ssr/individualSets'
 import { SetType, UserData } from '../../types'
 import PaypalButton from '../../components/PaypalButton/PaypalButton'
+import { useState } from 'react'
+import PaymmentSuccess from '../../components/PaymentSuccess/PaymentSuccess'
 
 export const getServerSideProps: GetServerSideProps = individualSetsProps;
 
-const Sets: NextPage<{ set: SetType, user: UserData | null, isLoggedIn: boolean }> = ({ set, user, isLoggedIn }) => {
+const Sets: NextPage<{ set: SetType, user: UserData | null, isLoggedIn: boolean, setUser: Function }> = ({ set, user, isLoggedIn, setUser }) => {
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
   let isPurchased = false;
 
   user?.sets.forEach((userSet) => {
@@ -59,6 +62,7 @@ const Sets: NextPage<{ set: SetType, user: UserData | null, isLoggedIn: boolean 
       </div>
 
       <div id={styles.setPage}>
+        {showOverlay && <PaymmentSuccess setShowOverlay={setShowOverlay} />}
         <div className={styles.header}>
           <Link href='/sets'>
             <a>
@@ -94,7 +98,15 @@ const Sets: NextPage<{ set: SetType, user: UserData | null, isLoggedIn: boolean 
 
             {!isPurchased && (
               <div id={styles.paypalContainer}>
-                <PaypalButton cost={set.price} disabled={!isLoggedIn} />
+                <PaypalButton
+                  cost={set.price}
+                  disabled={!isLoggedIn}
+                  set={set.title}
+                  setUser={setUser}
+                  steamId={user?.steam_id as string}
+                  setShowOverlay={setShowOverlay}
+                  userId={user?.id}
+                />
               </div>
             )}
           </section>

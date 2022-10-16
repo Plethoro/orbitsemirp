@@ -5,8 +5,18 @@ import {
   PayPalButtons,
 } from "@paypal/react-paypal-js";
 import axios from 'axios';
+import { UserData } from '../../types';
 
-const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: string, steamId: string, setShowOverlay: Dispatch<SetStateAction<boolean>>, setUser: Function }> = ({ cost, disabled, rank, steamId, setShowOverlay, setUser }) => {
+const PaypalButton: ComponentType<{
+  cost: string,
+  disabled: boolean,
+  rank?: string,
+  set?: string,
+  steamId: string,
+  setShowOverlay: Dispatch<SetStateAction<boolean>>,
+  setUser: Function,
+  userId?: number
+}> = ({ cost, disabled, rank, steamId, setShowOverlay, setUser, set, userId }) => {
   return (
     <PayPalScriptProvider
       options={{
@@ -27,7 +37,7 @@ const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: strin
         }
         className={styles.paypalButton}
         disabled={disabled}
-        forceReRender={[cost]}
+        forceReRender={[cost, disabled]}
         fundingSource={undefined}
         createOrder={(data, actions) => {
           return actions.order
@@ -50,21 +60,29 @@ const PaypalButton: ComponentType<{ cost: string, disabled: boolean, rank: strin
         onApprove={function (data, actions) {
           return actions.order?.capture().then(function () {
             // Your code here after capture the order
-            axios.post('/api/users/updateRank', { steamId, newRank: rank })
-              .then(() => {
-                const cookies = document.cookie.split(';');
-                cookies.forEach((cookie) => {
-                  const crumbs = cookie.split('=');
+            if (rank) {
+              axios.post('/api/users/updateRank', { steamId, newRank: rank })
+                .then(() => {
+                  axios.post('/api/users/find', { steamId })
+                    .then((res) => {
+                      const userData: UserData = res.data.user;
+                      setShowOverlay(true);
+                      setUser(userData);
+                    })
+                });
+            }
 
-                  if (crumbs[0] === 'user') {
-                    const newUser = JSON.parse(crumbs[1]);
-                    newUser.rank = rank;
-                    document.cookie = `user=${JSON.stringify(newUser)}`;
-                    setUser(newUser);
-                  }
-                })
-                setShowOverlay(true);
-              });
+            if (set) {
+              axios.post('/api/users/newSet', { steamId, userId, setName: set })
+                .then(() => {
+                  axios.post('/api/users/find', { steamId })
+                    .then((res) => {
+                      const userData: UserData = res.data.user;
+                      setShowOverlay(true);
+                      setUser(userData);
+                    })
+                });
+            }
           });
         }}
       />

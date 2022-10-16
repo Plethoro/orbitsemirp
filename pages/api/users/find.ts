@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { sets, users } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma';
 
@@ -13,13 +14,13 @@ export default async function handler(
   try {
     const steamId: string = req.body.steamId;
 
-    const user = await prisma.users.findFirst({
+    const user: users | null = await prisma.users.findFirst({
       where: {
         steam_id: steamId
       }
     })
 
-    const purchasedSets = await prisma.sets.findMany({
+    const purchasedSets: { name: string }[] = await prisma.sets.findMany({
       where: {
         user_id: user?.id
       },
@@ -28,7 +29,7 @@ export default async function handler(
       }
     })
 
-    const userWithSets = {...user, sets: purchasedSets};
+    const userWithSets = { ...user, sets: purchasedSets };
     // @ts-ignore
     userWithSets.rank = userWithSets.rank?.replace('_', '+');
 
