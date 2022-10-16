@@ -2,7 +2,7 @@
   {
     "title": "R",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, ea optio! Mollitia, voluptate. Magnam, enim! Maxime cupiditate libero perferendis praesentium similique, itaque nam maiores a ea dolor quaerat, reiciendis alias.",
-    "icon": "/ranks/vip.webp",
+    "icon": "/ranks/r.png",
     "colour": "#bbbbbb",
     "price": "2.50",
     "details": [
@@ -13,7 +13,7 @@
   {
     "title": "Vip",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui corrupti ea dignissimos, sunt repellendus laborum soluta labore ipsum atque voluptates non excepturi, consectetur aspernatur laboriosam! Nisi ipsum unde dolorem.",
-    "icon": "/ranks/vip.webp",
+    "icon": "/ranks/vip.png",
     "colour": "#c0b23b",
     "price": "5.00",
     "details": [
@@ -26,7 +26,7 @@
   {
     "title": "Vip+",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, possimus quaerat expedita eligendi illo sed earum veniam, reiciendis cupiditate iure quidem iste eveniet placeat amet illum eos saepe esse sunt.",
-    "icon": "/ranks/vip+.webp",
+    "icon": "/ranks/vip+.png",
     "colour": "#fff17b",
     "price": "12.50",
     "details": [
@@ -42,7 +42,7 @@
   {
     "title": "Omega",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam obcaecati ipsa incidunt mollitia quae illum reiciendis ullam, corporis, cumque autem assumenda placeat, earum consequatur distinctio consequuntur laboriosam? Amet, deserunt perspiciatis.",
-    "icon": "/ranks/omega.webp",
+    "icon": "/ranks/omega.png",
     "colour": "#f95050",
     "price": "25.00",
     "details": [
@@ -62,7 +62,7 @@
   {
     "title": "Legend",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad laboriosam quidem voluptate. Omnis, id odio recusandae magni rem unde cum. Asperiores, maiores consequatur exercitationem illo eligendi illum suscipit aperiam similique!",
-    "icon": "/ranks/legend.webp",
+    "icon": "/ranks/legend.png",
     "colour": "#9affee",
     "price": "40.00",
     "details": [
@@ -83,7 +83,7 @@
   {
     "title": "Supreme",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse dignissimos omnis magnam veritatis neque ab corporis totam itaque? Distinctio praesentium velit quibusdam provident maxime fugiat ex culpa tenetur doloremque.",
-    "icon": "/ranks/supreme.webp",
+    "icon": "/ranks/supreme.png",
     "colour": "#33ffa1",
     "price": "60.00",
     "details": [
@@ -105,7 +105,7 @@
   {
     "title": "Mythic",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi atque, expedita maxime commodi doloremque delectus vitae deserunt. Eum repellendus quis ipsa, similique doloremque ipsum voluptatibus ab sit iusto tenetur dicta.",
-    "icon": "/ranks/mythic.webp",
+    "icon": "/ranks/mythic.png",
     "colour": "#fe904b",
     "price": "80.00",
     "details": [
@@ -128,7 +128,7 @@
   {
     "title": "Custom",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi atque, expedita maxime commodi doloremque delectus vitae deserunt. Eum repellendus quis ipsa, similique doloremque ipsum voluptatibus ab sit iusto tenetur dicta.",
-    "icon": "/ranks/mythic.webp",
+    "icon": "/ranks/custom.png",
     "colour": "#aaaaff",
     "price": "100.00",
     "details": [

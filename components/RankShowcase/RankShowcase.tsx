@@ -84,7 +84,9 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 className={styles.price}
                 style={{ backgroundColor: selectedRank.colour }}
               >
-                ${userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
+                <span style={{ textDecoration: !(selected > userRankIndex) ? 'line-through': '' }}>
+                  ${userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
+                </span>
                 <sup className={styles.currency}>USD</sup>
               </h2>
             </div>
