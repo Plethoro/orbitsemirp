@@ -3,9 +3,10 @@ import styles from "./Footer.module.scss";
 
 const Footer: ComponentType<{}> = () => (
   <footer id={styles.footer}>
-    {/* <a href='https://ninjabattler.ca' target="_blank" rel="noreferrer">
+    <a href='https://ninjabattler.ca' target="_blank" rel="noreferrer">
+      Made by Ninjabattler
       <img src="/ninjabattler.png" />
-    </a> */}
+    </a>
   </footer>
 )
 
