@@ -1,0 +1,55 @@
+#setPage {
+  min-height: 90vh;
+
+  .header {
+    width: fit-content;
+    border-bottom: solid 1vmin #aaaaac;
+    border-right: solid 1vmin transparent;
+    filter: drop-shadow(0px 0px 5px black);
+
+    h1 {
+      font-size: 3.5em;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      color: #aaaaac;
+      font-family: "Play";
+      color: #eeeeed;
+      padding-left: 1vw;
+      padding-right: 3vw;
+
+      svg {
+        height: 7vh;
+        margin-right: 5%;
+      }
+    }
+  }
+}
+
+#backgroundImg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: -10vh;
+  overflow: hidden;
+  z-index: -1;
+
+  #overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #778dc2;
+    mix-blend-mode: multiply;
+  }
+
+  img {
+    height: 100vh;
+    z-index: -1;
+    transform: scale(1.2);
+    filter: grayscale(1);
+  }
+}
