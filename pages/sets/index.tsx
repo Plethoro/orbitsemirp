@@ -49,10 +49,13 @@ const Sets: NextPage<{ user: UserData | null, }> = ({ user }) => {
           <h1>Available Sets:</h1>
         </div>
 
-        <main className={styles.setsShowcase}>
-          {sets.map((set: SetType) => {
-            return <Set set={set} user={user} />
-          })}
+        <main >
+          <h2>Sets are given every server wipe, take a screenshot of this page to show to the admins to obtain them.</h2>
+          <div className={styles.setsShowcase}>
+            {sets.map((set: SetType) => {
+              return <Set set={set} user={user} />
+            })}
+          </div>
         </main>
       </div>
     </>
