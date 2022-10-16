@@ -6,11 +6,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import individualSetsProps from '../../ssr/individualSets'
-import { SetType } from '../../types'
+import { SetType, UserData } from '../../types'
+import PaypalButton from '../../components/PaypalButton/PaypalButton'
 
 export const getServerSideProps: GetServerSideProps = individualSetsProps;
 
-const Sets: NextPage<{ set: SetType }> = ({ set }) => {
+const Sets: NextPage<{ set: SetType, user: UserData | null, isLoggedIn: boolean }> = ({ set, user, isLoggedIn }) => {
+  let isPurchased = false;
+
+  user?.sets.forEach((userSet) => {
+    if (userSet.name === set.title) {
+      isPurchased = true;
+    }
+  })
+
   return (
     <>
       <Head>
@@ -73,13 +82,21 @@ const Sets: NextPage<{ set: SetType }> = ({ set }) => {
                 <h2
                   className={styles.price}
                 >
-                  <span>
+                  <span style={{ textDecoration: isPurchased ? 'line-through' : '' }}>
                     ${set.price}
                   </span>
                   <sup className={styles.currency}>USD</sup>
                 </h2>
-              </div>              
+              </div>
             </div>
+
+            {isPurchased && <h2 id={styles.ownedMessage}><i>Already Owned</i></h2>}
+
+            {!isPurchased && (
+              <div id={styles.paypalContainer}>
+                <PaypalButton cost={set.price} disabled={!isLoggedIn} />
+              </div>
+            )}
           </section>
         </main>
       </div>

@@ -13,6 +13,14 @@ model users {
   icon     String?
   rank     rank?   @default(Free)
   id       Int     @id @default(autoincrement())
+  sets     sets[]
+}
+
+model sets {
+  id      Int    @id @default(autoincrement())
+  user_id Int
+  name    String
+  users   users  @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 enum rank {

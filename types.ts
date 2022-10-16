@@ -1,3 +1,14 @@
+export interface UserData {
+  steam_id: string;
+  username: string;
+  icon: string;
+  rank: string;
+  id: number;
+  sets: {
+    name: string;
+  }[];
+}
+
 export interface HomepageProps {
   steamMembers: string;
   discordMembers: string;
@@ -22,33 +33,33 @@ export interface SetType {
 export interface SteamLoginData {
   provider: string,
   _json: {
-      "steamid": string,
-      "communityvisibilitystate": number,
-      "profilestate": number,
-      "personaname": string,
-      "profileurl": string,
-      "avatar": string,
-      "avatarmedium": string,
-      "avatarfull": string,
-      "avatarhash": string,
-      "lastlogoff": number,
-      "personastate": number,
-      "primaryclanid": string,
-      "timecreated": number,
-      "personastateflags": number
+    "steamid": string,
+    "communityvisibilitystate": number,
+    "profilestate": number,
+    "personaname": string,
+    "profileurl": string,
+    "avatar": string,
+    "avatarmedium": string,
+    "avatarfull": string,
+    "avatarhash": string,
+    "lastlogoff": number,
+    "personastate": number,
+    "primaryclanid": string,
+    "timecreated": number,
+    "personastateflags": number
   },
   id: string,
   displayName: string,
   photos: [
-      {
-          value: string
-      },
-      {
-          value: string
-      },
-      {
-          value: string
-      }
+    {
+      value: string
+    },
+    {
+      value: string
+    },
+    {
+      value: string
+    }
   ],
   identifier: string
 }

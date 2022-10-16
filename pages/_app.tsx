@@ -4,12 +4,12 @@ import NavBar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import { NextRouter, useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { SteamLoginData } from '../types'
+import { SteamLoginData, UserData } from '../types'
 import axios from 'axios'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [user, setUser] = useState<any | null>(null);
+  const [user, setUser] = useState<UserData | null>(null);
   const router: NextRouter = useRouter();
 
   useEffect(() => {
@@ -24,12 +24,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       axios.post('/api/users/new', { newUser: orbitUser })
         .then((res) => {
-          const newUser: any = res.data.user;
+          const newUser: UserData = res.data.user;
           orbitUser.rank = newUser.rank;
 
           document.cookie = `user=${JSON.stringify(orbitUser)}`;
           setIsLoggedIn(true);
-          setUser(orbitUser);
+          setUser(newUser);
 
           router.push('/');
         })
@@ -46,8 +46,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       const crumbs: string[] = cookie.split('=');
 
       if (crumbs[0] === 'user') {
-        setIsLoggedIn(true);
-        setUser(JSON.parse(crumbs[1]))
+        const cookieUser = JSON.parse(crumbs[1])
+
+        axios.post('/api/users/find', {steamId: cookieUser.id})
+        .then((res) => {
+          const userData: UserData = res.data.user;
+          setIsLoggedIn(true);
+          setUser(userData);
+        })
       }
     })
   }, [])

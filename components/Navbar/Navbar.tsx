@@ -4,8 +4,9 @@ import styles from "./Navbar.module.scss";
 import ranks from '../../ranks.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
+import { UserData } from '../../types';
 
-const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn, user }) => {
+const NavBar: ComponentType<{ isLoggedIn: boolean; user: UserData | null }> = ({ isLoggedIn, user }) => {
   let selectedRank: any = { colour: 'white' };
 
   ranks.forEach((rank) => {
@@ -34,10 +35,10 @@ const NavBar: ComponentType<{ isLoggedIn: boolean; user: any }> = ({ isLoggedIn,
         {isLoggedIn && (
           <div id={styles.userInfoContainer}>
             <div>
-              <h3>{user.name}</h3>
-              <h3 className={styles.rank} style={{ backgroundColor: selectedRank.colour }}>{user.rank}</h3>
+              <h3>{user?.username}</h3>
+              <h3 className={styles.rank} style={{ backgroundColor: selectedRank.colour }}>{user?.rank}</h3>
             </div>
-            <img src={user.icon} />
+            <img src={user?.icon} />
           </div>
         )}
       </div>

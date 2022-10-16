@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { ComponentType, useState, Dispatch, SetStateAction, useEffect } from 'react';
-import { RankType } from '../../types';
+import { RankType, UserData } from '../../types';
 import PaypalButton from '../PaypalButton/PaypalButton';
 import styles from "./RankShowcase.module.scss";
 
@@ -10,7 +10,7 @@ export interface RankShowcaseProps {
   setSelected: Dispatch<SetStateAction<number>>;
   selectedRank: RankType;
   isLoggedIn: boolean;
-  user: any | null;
+  user: UserData | null;
   setShowOverlay: Dispatch<SetStateAction<boolean>>;
   setUser: Function;
 }
@@ -97,7 +97,7 @@ const RankShowcase: ComponentType<RankShowcaseProps> = ({ ranks, selected, setSe
                 cost={userRankPrice > 0 && (selected > userRankIndex) ? generatePrice(selectedRank.price, userRankPrice) : selectedRank.price}
                 disabled={!isLoggedIn}
                 rank={selectedRank.title}
-                steamId={user ? user.id : ''}
+                steamId={user ? user.steam_id : ''}
                 setShowOverlay={setShowOverlay}
                 setUser={setUser}
               />

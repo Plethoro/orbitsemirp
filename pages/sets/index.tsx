@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../../styles/Sets.module.scss'
 import sets from '../../sets.json'
-import { SetType } from '../../types'
+import { SetType, UserData } from '../../types'
 import Set from '../../components/Set/Set'
 
-const Sets: NextPage<{}> = () => {
+const Sets: NextPage<{ user: UserData | null, }> = ({ user }) => {
   return (
     <>
       <Head>
@@ -51,7 +51,7 @@ const Sets: NextPage<{}> = () => {
 
         <main className={styles.setsShowcase}>
           {sets.map((set: SetType) => {
-            return <Set set={set} />
+            return <Set set={set} user={user} />
           })}
         </main>
       </div>

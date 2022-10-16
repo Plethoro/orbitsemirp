@@ -4,10 +4,10 @@ import RankShowcase from '../../components/RankShowcase/RankShowcase'
 import styles from '../../styles/Ranks.module.scss'
 import ranks from '../../ranks.json';
 import { useState } from 'react';
-import { RankType } from '../../types';
+import { RankType, UserData } from '../../types';
 import PaymmentSuccess from '../../components/PaymentSuccess/PaymentSuccess';
 
-const Ranks: NextPage<{ isLoggedIn: boolean, user: any | null, setUser: Function }> = ({ isLoggedIn, user, setUser }) => {
+const Ranks: NextPage<{ isLoggedIn: boolean, user: UserData | null, setUser: Function }> = ({ isLoggedIn, user, setUser }) => {
   const [selected, setSelected] = useState<number>(0);
   const [showOverlay, setShowOverlay] = useState<boolean>(false);
   const selectedRank: RankType = ranks[selected] as RankType;
