@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma';
 import nodemailer from 'nodemailer'
+import { transport } from '../../../lib/nodemailer';
 
 type Data = {
   name: string
@@ -24,16 +25,6 @@ export default async function handler(
     });
 
     res.status(200).send({ newSet } as any);
-
-    const transport = nodemailer.createTransport({
-      host: process.env.EMAIL_SERVER_HOST as string,
-      port: Number(process.env.EMAIL_SERVER_PORT as string),
-      secure: true,
-      auth: {
-        user: process.env.GMAIL_MAIL,
-        pass: process.env.GMAIL_PASS
-      }
-    })
 
     const mailOptions = {
       from: process.env.GMAIL_MAIL,
