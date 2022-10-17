@@ -51,6 +51,7 @@
 
     #rankIcon {
       width: 50%;
+      overflow: hidden;
       margin-right: -7.5%;
       height: 80vh;
       display: flex;
@@ -59,7 +60,7 @@
       filter: drop-shadow(2px 2px 5px black);
 
       img {
-        width: 100%;
+        height: 100%;
       }
     }
 
