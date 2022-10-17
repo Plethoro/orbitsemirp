@@ -48,6 +48,7 @@ const PaypalButton: ComponentType<{
                     currency_code: 'USD',
                     value: cost,
                   },
+                  description: rank ? `Rank: ${rank}, SteamId: ${steamId}` : set ? `Set: ${set}, SteamId: ${steamId}`  : ''
                 },
               ],
             })
